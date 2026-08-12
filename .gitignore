@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Logs and temporary editor output
+*.log
+npm-debug.log*
+tempCodeRunnerFile.js
