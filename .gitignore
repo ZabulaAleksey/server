@@ -9,4 +9,5 @@ node_modules/
 # Logs and temporary editor output
 *.log
 npm-debug.log*
+pnpm-debug.log*
 tempCodeRunnerFile.js

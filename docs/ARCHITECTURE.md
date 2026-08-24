@@ -10,4 +10,6 @@
 
 ## Ограничения
 
-Автоматизированные endpoint/E2E тесты пока отсутствуют; `npm test` намеренно завершается ошибкой-заглушкой.
+Зависимости объявляются в `package.json`, воспроизводятся через `pnpm-lock.yaml` и материализуются локально в `node_modules/` из machine-level pnpm content store и global virtual store. Прямой запуск `node server.js` входит в compatibility proof этой настройки.
+
+Автоматизированные endpoint/E2E тесты пока отсутствуют; `pnpm test` намеренно завершается ошибкой-заглушкой.

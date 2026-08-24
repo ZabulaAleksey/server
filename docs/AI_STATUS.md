@@ -3,9 +3,10 @@
 ## Governance migration — 2026-08-24
 
 - Канонический overlay и `prompts/STAGES.md` созданы; project validator — PASS.
-- `npm test` остаётся намеренно падающей заглушкой и не заявлен как PASS; продуктовый код не изменялся.
+- Dependency-manager migration выполнена в `chore/dependency-manager-migration`: канон — `pnpm@11.23.0`, `pnpm-lock.yaml`, machine-level shared content store и проверенный для этого backend global virtual store; npm lockfile удалён после clean restore.
+- `pnpm test` остаётся намеренно падающей заглушкой и не заявлен как PASS; продуктовый код не изменялся.
 - Репозиторий находится в `~/codex-workspace/server`; push/merge не выполнялись.
 
 - Состояние: overlay обновлён.
 - Продуктовый код: не изменялся.
-- Проверки: `npm test` известен как намеренно падающая заглушка; успешный тестовый набор отсутствует.
+- Проверки migration: `pnpm install --frozen-lockfile` — PASS; `pnpm exec node --check server.js` — PASS; `pnpm test` сохранил ожидаемую намеренно падающую заглушку (exit 1), успешный тестовый набор отсутствует.
